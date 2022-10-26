@@ -4,10 +4,6 @@ function validate(isSubmitted = false) {
     let fullName = document.getElementById('full-name').value
     let gender = document.getElementById('gender')
     let select = gender.options[gender.selectedIndex].value
-    let hobbies1 = document.getElementById('hobbies1')
-    let hobbies2 = document.getElementById('hobbies2')
-    let hobbies3 = document.getElementById('hobbies3')
-    let hobbies4 = document.getElementById('hobbies4')
     let error = false
 
     if (isSubmitted) {
@@ -22,7 +18,7 @@ function validate(isSubmitted = false) {
         } else {
             document.getElementById('full-name-invalid').style.display = 'block'
             document.getElementById('full-name-valid').style.display = 'none'
-            error = true
+            
         }
 
 
@@ -33,7 +29,7 @@ function validate(isSubmitted = false) {
         } else {
             document.getElementById('gender-invalid').style.display = 'block'
             document.getElementById('gender-valid').style.display = 'none'
-            error = true
+            
         }
 
         if (hobbies1) {
@@ -52,7 +48,7 @@ function validate(isSubmitted = false) {
         } else {
             document.getElementById('hobbies-invalid').style.display = 'block'
             document.getElementById('hobbies-valid').style.display = 'none'
-            error = true
+            
         }
 
         if (hobbies3) {
@@ -61,7 +57,7 @@ function validate(isSubmitted = false) {
         } else {
             document.getElementById('hobbies-invalid').style.display = 'block'
             document.getElementById('hobbies-valid').style.display = 'none'
-            error = true
+            
         }
 
         if (hobbies4) {
@@ -70,13 +66,13 @@ function validate(isSubmitted = false) {
         } else {
             document.getElementById('hobbies-invalid').style.display = 'block'
             document.getElementById('hobbies-valid').style.display = 'none'
-            error = true
+            
         }
 
 
 
         if (!error) {
-            alert('Your details have been saved successfully')
+            alert('Hobbies of '+ fullName +' '+ '(' + gender + ')' + ' '+ 'are' + ' '  )
             document.getElementById('form').reset()
             let validFeedbacks = document.getElementsByClassName('valid-feedback')
             for (i = 0; i < validFeedbacks.length; i++) {
